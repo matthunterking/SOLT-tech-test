@@ -9,5 +9,5 @@ export const getBookingUrl = (see_tickets_url_infos = []) => {
  const tktsOnlineUrl = findUrlType(see_tickets_url_infos, bookingSubdomains.tktsOnline);
  const officialLondonTheatreUrl = findUrlType(see_tickets_url_infos, bookingSubdomains.officialLondonTheatre);
 
- return tktsOnlineUrl || officialLondonTheatreUrl || null;
+ return tktsOnlineUrl || officialLondonTheatreUrl || { url: null };
 }

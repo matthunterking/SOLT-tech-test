@@ -5,7 +5,7 @@ import TestData from './testData';
 describe('getBookingUrl', () => {
 
  it('should return null when not given any arguments', () => {
-  expect(getBookingUrl()).toEqual(null);
+  expect(getBookingUrl().url).toEqual(null);
  });
 
  it('should return a tktsOnlineUrl when a tktsOnlineUrl is included in the array', () => {
@@ -30,6 +30,6 @@ describe('getBookingUrl', () => {
  it('should return a null when both a officiallondontheatreUrl and tktsOnlineUrl are not included', () => {
   const { see_tickets_url_infos, expected } = TestData.noValidUrl;
 
-  expect(getBookingUrl(see_tickets_url_infos)).toEqual(expected);
+  expect(getBookingUrl(see_tickets_url_infos).url).toEqual(expected);
  });
 });
