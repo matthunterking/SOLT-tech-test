@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { baseApiURL } from './environment';
+import TodaysDeals from './components/TodaysDeals';
 
 const App = () => {
 
@@ -25,11 +26,7 @@ const App = () => {
 
   if (hasError) return <p>Oops something has gone wrong. Please try again later</p>
 
-  return (
-    <div>
-      <h1>Today's deals</h1>
-    </div>
-  );
+  return <TodaysDeals showData={showData} />;
 }
 
 export default App;
