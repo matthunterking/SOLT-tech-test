@@ -3,6 +3,7 @@ import axios from 'axios';
 import { baseApiURL } from './environment';
 import TodaysDeals from './components/TodaysDeals';
 import Loading from './components/Loading';
+import ErrorMessage from './components/ErrorMessage';
 
 const App = () => {
 
@@ -25,7 +26,7 @@ const App = () => {
 
   if (isLoading) return <Loading />
 
-  if (hasError) return <p>Oops something has gone wrong. Please try again later</p>
+  if (true) return <ErrorMessage />
 
   return <TodaysDeals showData={showData} />;
 }
