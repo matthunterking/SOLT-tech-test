@@ -8,6 +8,11 @@ export const Container = styled.div`
  margin: 2rem;
  position: relative;
  background-color: #FFFFFF;
+ width: 300px;
+
+ @media(${breakpoints.desktop}) {
+  width: 400px
+ }
 `;
 
 export const SoldOut = styled.div`
@@ -20,26 +25,23 @@ export const SoldOut = styled.div`
 `;
 
 export const HeroImage = styled.img`
- background-image: url(${({ imageUrl }) => imageUrl});
- background-size: cover;
- background-position: center;
- height: 125px;
+ height: 150px;
  width: 100%;
+ object-fit: cover;
  filter: ${({ isSoldOut }) => isSoldOut ? 'grayscale(1)' : 'none'};
-
- @media (${breakpoints.tablet}) {
-  height: 175px;
- }
-
- @media (${breakpoints.desktop}) {
-  height: 250px;
+ 
+ @media(${breakpoints.desktop}) {
+  height: 200px;
  }
 `;
 
 export const ShowTitle = styled.h2`
-
+ font-size: 20px;
+ padding: 0.25rem;
 `;
 
 export const ShowSubTitle = styled.h3`
-
+ font-size: 12px;
+ color: #757575;
+ padding-bottom: 0.25rem;
 `;

@@ -4,7 +4,7 @@ export const Button = styled.a`
  color: white;
  font-weight: bold;
  width: 100%;
- height: 50px;
+ height: 35px;
  display: flex;
  justify-content: center;
  align-items: center;
@@ -16,7 +16,7 @@ export const Button = styled.a`
 export const DisabledButton = styled.p`
  width: 100%;
  font-weight: bold;
- height: 50px;
+ height: 35px;
  display: flex;
  justify-content: center;
  align-items: center; 
