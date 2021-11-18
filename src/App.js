@@ -26,7 +26,7 @@ const App = () => {
 
   if (isLoading) return <Loading />
 
-  if (true) return <ErrorMessage />
+  if (hasError) return <ErrorMessage />
 
   return <TodaysDeals showData={showData} />;
 }
